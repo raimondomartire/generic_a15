@@ -14,3 +14,7 @@ To build:
 . build/envsetup.sh
 lunch omni_generic_a15-eng && mka recoveryimage
 ```
+
+Credits
+https://github.com/OpenKirin/android_device_huawei_eva
+https://github.com/Tkkg1994/android_device_generic_a15
