@@ -1,0 +1,20 @@
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+
+ro.sf.lcd_density=480
+ro.frp.pst=/dev/block/platform/hi_mci.0/by-name/frp
+ro.enable_boot_charger_mode=0
+ro.decrypt.data=0
+sys.usb.configfs=1
+sys.usb.config=mtp,adb
+persist.sys.usb.config=manufacture,adb
+sys.usb.controller=ff100000.dwc3
+persist.service.adb.enable=1                                                    
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+
+
+
+
+

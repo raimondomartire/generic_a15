@@ -1,0 +1,27 @@
+import /init.recovery.hi3660.usb.rc
+
+on init
+    mkdir /cust
+
+    symlink /dev/block/platform/ff3b0000.ufs /dev/block/bootdevice
+
+on fs
+    start teecd
+    start volisnotd
+
+on boot
+    chown system system /sys/devices/platform/ff200000.hisi_usb/plugusb
+    chmod 0660 /sys/devices/platform/ff200000.hisi_usb/plugusb
+
+service teecd /sbin/teecd
+    user root
+    group root
+    disabled
+    seclabel u:r:tee:s0
+
+service volisnotd /sbin/volisnotd -m
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:tee:s0
